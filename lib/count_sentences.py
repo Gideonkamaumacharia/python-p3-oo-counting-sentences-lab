@@ -11,9 +11,20 @@ class MyString:
             return True
         else:
             return False
-
+    
     def is_question(self):
         if self.value.endswith('?'):
             return True
         else:
-            return False    
+            return False
+    
+    def is_exclamation(self):
+        if self.value.endswith('!'):
+            return True
+        else:
+            return False
+    
+    def count_sentences(self):
+        sentences = self.value.split('.')
+        sentences = [sentence.strip() for sentence in sentences if sentence.strip()]
+        return len(sentences)
