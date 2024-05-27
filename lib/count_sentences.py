@@ -3,6 +3,13 @@
 class MyString:
     def __init__(self, value=''):
         if not isinstance(value, str):
-            raise ValueError("Value must be a string")
+            print("The value must be a string.")
         self.value = value
+    
+    def is_sentence(self):
+        if self.value.endswith('.'):
+            return True
+        else:
+            return False
 
+        
