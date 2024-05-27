@@ -12,4 +12,8 @@ class MyString:
         else:
             return False
 
-        
+    def is_question(self):
+        if self.value.endswith('?'):
+            return True
+        else:
+            return False    
